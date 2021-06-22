@@ -1,13 +1,18 @@
-
 #import "RNSecureKeystore.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @implementation RNSecureKeystore
 
-- (dispatch_queue_t)methodQueue
+RCT_EXPORT_MODULE();
+
+RCT_EXPORT_METHOD(isAvailable:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    return dispatch_get_main_queue();
+    LAContext *context = [[LAContext alloc] init];
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:NULL]) {
+        resolve(@(YES));
+    } else {
+        resolve(@(NO));
+    }
 }
-RCT_EXPORT_MODULE()
 
 @end
-  
