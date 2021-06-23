@@ -5499,11 +5499,9 @@
     "jscodeshift" "^0.11.0"
     "nullthrows" "^1.1.1"
 
-"react-native-secure-keystore@file:../":
-  "resolved" "file:.."
+"react-native-secure-keystore@github:shivammaindola/react-native-link":
+  "resolved" "git+ssh://git@github.com/shivammaindola/react-native-link.git#f66fe7f9c57d0c7593801be2c22886c9966ba84d"
   "version" "1.0.0"
-  dependencies:
-    "react-native-secure-keystore" "github:shivammaindola/react-native-link"
 
 "react-native@>=0.64.0-rc.0 || 0.0.0-*", "react-native@0.64.2":
   "integrity" "sha512-Ty/fFHld9DcYsFZujXYdeVjEhvSeQcwuTGXezyoOkxfiGEGrpL/uwUZvMzwShnU4zbbTKDu2PAm/uwuOittRGA=="
