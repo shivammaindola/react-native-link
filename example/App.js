@@ -31,7 +31,7 @@ export default class App extends Component<Props> {
 
          return (
                <View style={{ flex: 1, padding: 0, }}>
-                <MirrarSDK
+                <SecureKeystore
             data={data}
             uuid='562e2c77-8e8d-41b1-96bc-4b431b2c3a16'
              />
